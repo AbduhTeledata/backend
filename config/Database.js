@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('railway', 'root', 'JO0qBJbkSXI5PFr725gV', {
-    host: "containers-us-west-30.railway.app",
+const db = new Sequelize('freedb_h941teledata-salon', 'freedb_Abduh2020', 'gFHd!UMu56C5Q65', {
+    host: "sql.free.tech",
     dialect: "mysql",
     pool: {
         max: 5,

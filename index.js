@@ -29,9 +29,9 @@ const store = new sessionStore({
     db: db
 });
 
-//    (async() => {
-//            await db.sync({force: true});
-//        }) ();
+   (async() => {
+           await db.sync({force: true});
+       }) ();
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -45,7 +45,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'mysql://root:JO0qBJbkSXI5PFr725gV@containers-us-west-30.railway.app:6698/railway'   
+    origin: 'sql.freedb.tech:3000'   
 }));
 
 app.use(express.json());
@@ -64,7 +64,7 @@ app.use(CategoryRoute);
 app.use(ProductSalonRoute);
 app.use(KeranjangRoute);
 
-// store.sync(); // untuk sync table session ke database
+store.sync(); // untuk sync table session ke database
 
 app.listen(process.env.APP_PORT, () => {
     console.log('Server up and running');
