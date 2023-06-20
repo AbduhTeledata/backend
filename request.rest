@@ -1,0 +1,617 @@
+// Create User Register Owner
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Yogi",
+    "email": "owner.kyoshi@gmail.com",
+    "password": "owneR9022",
+    "confPassword": "owneR9022",
+    "role": "Owner",
+    "branchId": 1
+}
+
+###
+// Login owner
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "owner.kyoshi@gmail.com",
+    "password": "owneR9022",
+}
+
+###
+// Logout
+DELETE   http://localhost:5000/logout
+
+###
+// Create User Register Kepala staf 1
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Leader",
+    "email": "leader@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "Leader",
+    "branchId": 1
+}
+
+###
+// Create User Register Kasir 1
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kasir 1",
+    "email": "kasir1.kyoshi@gmail.com",
+    "password": "x182509a",
+    "confPassword": "x182509a",
+    "role": "Kasir",
+    "branchId": 1
+}
+
+###
+// Create User Register Kasir 2
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kasir 2",
+    "email": "kasir2.kyoshi@gmail.com",
+    "password": "x28509z",
+    "confPassword": "x28509z",
+    "role": "Kasir",
+    "branchId": 2
+}
+
+###
+// Create User Register Staff 1
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Staf",
+    "email": "staf@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "Staf",
+    "branchId": 1
+}
+
+
+###
+// Create User Register Random User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "User"
+}
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+###
+//Get Single Data
+GET http://localhost:5000/users/2af4d7c7-d6cf-4dc9-bf42-c16589e05a38
+
+###
+// Update User
+PATCH  http://localhost:5000/users/c1097cb8-578e-4618-8166-0e26036e38b1
+Content-Type: application/json
+
+{
+    "name": "Kasir",
+    "email": "kasir@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "Kasir"
+}
+
+###
+// Delete User single data
+DELETE   http://localhost:5000/users/34f7b23d-fdba-4702-bdbd-36491a9e03fd
+
+###
+// Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kasir1.kyoshi@gmail.com",
+    "password": "x182509a"
+}
+
+###
+// Me
+GET  http://localhost:5000/me
+
+###
+// Logout
+DELETE   http://localhost:5000/logout
+
+###
+// post data company
+POST  http://localhost:5000/companies
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Pusat",
+    "address": "Jalan Paledang",
+    "phone": "081116777"
+}
+
+###
+// Get all company
+GET  http://localhost:5000/companies
+
+###
+// update data company
+PATCH   http://localhost:5000/companies/4ec789e2-3c08-4e67-b353-7407dd759dc9
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Pusat",
+    "address": "Hyper Square Paskal 24",
+    "phone": "081116777"
+}
+
+###
+// post data cabang 1
+POST  http://localhost:5000/branches
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Cabang 1",
+    "address": "Jalan Paledang",
+    "phone": "081116666",
+    "companyId": "1"
+}
+
+###
+// post data cabang 2
+POST  http://localhost:5000/branches
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Cabang 2",
+    "address": "Hyper Square Paskal 24",
+    "phone": "08111777",
+    "companyId": "1"
+}
+
+###
+// post data cabang 3
+POST  http://localhost:5000/branches
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Cabang 3",
+    "address": "Jalan Soekarno Hatta",
+    "phone": "0811199999",
+    "companyId": "1"
+}
+
+###
+// Get all kantor cabang
+GET  http://localhost:5000/branches
+
+###
+// Get single kantor cabang
+GET  http://localhost:5000/branches/81e2a9bb-a7ae-4dba-b037-e1ac3a65dcbd
+
+###
+// update data cabang
+PATCH   http://localhost:5000/branches/81e2a9bb-a7ae-4dba-b037-e1ac3a65dcbd
+Content-Type: application/json
+
+{
+    "name": "Kyoshi Salon Kantor Cabang 2 update",
+    "address": "Hyper Square Paskal 24",
+    "phone": "0811199999",
+    "companyId": "1"
+}
+
+###
+// post data karyawan cabang 1 Terapis
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Ayunda",
+    "address": "Jalan Ahmad Yani 24",
+    "phone": "081155555",
+    "position": "Terapis",
+    "branchId": "1"
+}
+
+###
+// post data karyawan cabang 1 Leader
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Handa",
+    "address": "Jalan Paledang 50",
+    "phone": "081155555",
+    "position": "Kepala",
+    "branchId": "1"
+}
+
+###
+// post data karyawan cabang 1 Kasir
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Dandi",
+    "address": "Jalan Cibeureum 20",
+    "phone": "081144444",
+    "position": "Kasir",
+    "branchId": "1"
+}
+
+###
+// post data karyawan cabang 2 Terapis
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Hamidah",
+    "address": "Jalan cibeurem 40",
+    "phone": "08112333",
+    "position": "Terapis",
+    "branchId": "2"
+}
+
+###
+// post data karyawan cabang 2 Leader
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Mita",
+    "address": "Jalan Cibuntu 10",
+    "phone": "0811777777",
+    "position": "Kepala",
+    "branchId": "2"
+}
+
+###
+// post data karyawan cabang 2 Kasir
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "name": "Dimas",
+    "address": "Jalan Cibcadas 224",
+    "phone": "081888886666",
+    "position": "Kasir",
+    "branchId": "2"
+}
+
+// Read Update Delete  Employee Belum
+
+###
+// post data product salon
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "PEMASANGAN TYPE ICHIRO",
+    "price":200000
+}
+
+###
+// post data product salon
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "PEMASANGAN TYPE MEGUMi",
+    "price":250000
+}
+
+###
+// post data product / jasa salon
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Tambah Vitamin/Hair Tonic/Parfum",
+    "price": 75000
+}
+
+###
+// post data product / jasa salon
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "C/H Biasa + catok (Curly +10rb)",
+    "price": 50000
+}
+
+###
+// post data product / jasa salon
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Creambath/Hairspa Premium Extension + catok",
+    "price": 85000
+}
+
+###
+// Get all product
+GET  http://localhost:5000/products
+
+###
+// Get single product
+GET  http://localhost:5000/products/11b9483d-114a-4b8c-897b-40aaacbe0380
+
+###
+// update data product
+PATCH   http://localhost:5000/products/11b9483d-114a-4b8c-897b-40aaacbe0380
+Content-Type: application/json
+
+{
+    "name": "C/H Premium + catok (Curly +10rb) update",
+    "price": 75000
+}
+
+###
+// Delete data product
+DELETE    http://localhost:5000/products/11b9483d-114a-4b8c-897b-40aaacbe0380
+
+###
+// post data category product salon
+POST  http://localhost:5000/categories
+Content-Type: application/json
+
+{
+    "name": "Pewarna Rambut"
+}
+
+###
+// Get all category product salon
+GET  http://localhost:5000/categories
+
+###
+// post data product salon
+POST  http://localhost:5000/productsalons
+Content-Type: application/json
+
+{
+    "kode": "KS-01",
+    "name": "Pikok",
+    "price": 20000,
+    "is_ready": "true",
+    "gambar": "sate-ayam.jpg",
+    "categoryId": 3
+}
+
+###
+// post data product salon
+POST  http://localhost:5000/productsalons
+Content-Type: application/json
+
+{
+    "kode": "KS-02",
+    "name": "Shampoo Ekstrak Lidah Buaya",
+    "price": 25000,
+    "is_ready": "true",
+    "gambar": "mie-ayam-bakso.jpg",
+    "categoryId": 2
+}
+
+###
+// post data product salon
+POST  http://localhost:5000/productsalons
+Content-Type: application/json
+
+{
+    "kode": "KS-03",
+    "name": "Vitamin B2",
+    "price": 25000,
+    "is_ready": "true",
+    "gambar": "nasi-goreng-telor.jpg",
+    "categoryId": 1
+}
+###
+// Get all product salon
+GET  http://localhost:5000/productsalons
+
+###
+// Get single product salon
+GET  http://localhost:5000/productsalons/f8428c36-9eea-4e09-9d27-6a6dca565ea1
+
+###
+// post data member 1 cabang 1
+POST  http://localhost:5000/members
+Content-Type: application/json
+
+{
+    "membercode": "KYOSHI001",
+    "name": "Dina",
+    "gender": "P",
+    "address": "Jalan Dayeuhkolot",
+    "placebirth": "Bandung",
+    "datebirth": "1978-05-06",
+    "phone": "082128421887",
+    "code": "M",
+    "branchId": "1"
+}
+
+###
+// post data non member 2 cabang 2
+POST  http://localhost:5000/members
+Content-Type: application/json
+
+{
+    "membercode": "KYOSHI002",
+    "name": "Abduh",
+    "gender": "P",
+    "address": "Baleendah",
+    "placebirth": "Bandung",
+    "datebirth": "1977-07-07",
+    "phone": "08212842177",
+    "code": "N",
+    "branchId": "2"
+}
+
+###
+// post data member 2 cabang 1
+POST  http://localhost:5000/members
+Content-Type: application/json
+
+{
+    "membercode": "KYOSHI003",
+    "name": "Diah",
+    "gender": "P",
+    "address": "Baleendah",
+    "placebirth": "Bandung",
+    "datebirth": "1977-07-07",
+    "phone": "08212842177",
+    "code": "M",
+    "branchId": "1"
+}
+
+###
+// Get all member
+GET  http://localhost:5000/members
+
+###
+// Get single member
+GET  http://localhost:5000/members/7136f70a-1732-47b8-89f1-2635bda5f0aa
+
+// Read Update Delete member belum
+
+###
+// post data discount
+POST  http://localhost:5000/discounts
+Content-Type: application/json
+
+{
+    "name": "Member"
+    
+}
+
+###
+// Get all discount
+GET  http://localhost:5000/discounts
+
+// Read Update Delete discount belum
+
+###
+// post data order
+POST  http://localhost:5000/orders
+Content-Type: application/json
+
+{
+    "inv_code": "INV0004",
+    "qty": 1,
+    "sub_total": 170000,
+    "total_disc": 20000,
+    "taxes": 0,
+    "total_price": 250000,
+    "iscard": "Y",
+    "note": "polosan",
+    "productId": 3,
+    "memberId": 1,
+    "branchId": 1
+}
+
+###
+// post data order 2
+POST  http://localhost:5000/orders
+Content-Type: application/json
+
+{
+    "inv_code": "INV0003",
+    "qty": 1,
+    "sub_total": 200000,
+    "total_disc": 10000,
+    "taxes": 0,
+    "total_price": 190000,
+    "iscard": "Ya",
+    "productId": 1,
+    "discountId": 1,
+    "memberId": 1,
+    "employeeId": 4,
+    "branchId": 2
+    
+}
+
+###
+// Get all order
+GET  http://localhost:5000/orders
+
+###
+// Get all order by id
+GET  http://localhost:5000/orders/85d7ec14-f6aa-4a94-8d58-1424884071fd
+
+###
+// post data keranjang
+POST  http://localhost:5000/keranjangs
+Content-Type: application/json
+
+{
+    "jumlah": 1,
+    "total_harga": 20000,
+    "productsalonId": 3
+    
+}
+
+###
+// Get all keranjang
+GET  http://localhost:5000/keranjangs
+
+// post data keranjang
+POST  http://localhost:5000/keranjangs
+Content-Type: application/json
+
+{
+    "jumlah": 1,
+    "total_harga": 20000,
+    "productsalonId": 3
+    
+}
+
+###
+// Get all cart by id
+GET  http://localhost:5000/carts/85d7ec14-f6aa-4a94-8d58-1424884071fd
+
+###
+// post data order details
+POST  http://localhost:5000/orderdetails
+Content-Type: application/json
+
+{
+    
+    "inv_code": "INV0002",
+    "qty": 1,
+    "sub_total": 200000,
+    "total_disc": 10000,
+    "taxes": 0,
+    "total_price": 190000,
+    "iscard": "Ya",
+    "productId": 1,
+    "discountId": 1,
+    "memberId": 1,
+    "employeeId": 4,
+    "branchId": 1 
+    
+}
+
+###
+// Get all order details
+GET  http://localhost:5000/orderdetails
