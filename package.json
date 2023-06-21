@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "teledata-salon-backend",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abduh",
   "license": "ISC",
   "dependencies": {
     "argon2": "^0.30.3",

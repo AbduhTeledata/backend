@@ -45,7 +45,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'sql.freedb.tech:3000'   
+    origin: 'https://creepy-slip-wasp.cyclic.app/:3000' //dari hosting react js/frontend ke hosting express js/backend  
 }));
 
 app.use(express.json());
